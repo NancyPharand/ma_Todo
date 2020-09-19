@@ -23,13 +23,6 @@
 		
 		<script type="text/javascript">
 
-		/*function changementCheckbox() {
-			let fait = $(this).prop("checked");
-			let post_id = $(this).attr('post_id');
-			faitTodo(post_id,fait);
-			console.log(fait);
-		}*/
-
 		//obtient une tâche stockée au serveur
 		function obtenirTodos(data, status){
 			console.log(data);
@@ -42,12 +35,6 @@
 				liClone.attr('id', 'todo-'+todo.ID);
 
 				let tâche = liClone.find('span');
-
-				/*let checkbox = $('<input type="checkbox" class="todoFait">');
-				checkbox.prop( "checked", todo.fait);
-				checkbox.attr('post_id',todo.ID);
-				checkbox.change(changementCheckbox);
-				liClone.append(checkbox);*/
 
 				tâche.text(todo.post_title);
 				tâche.css("font-size", "2em");
@@ -118,7 +105,7 @@
 			}
 		}
 
-		/*function faitTodo(data, success) {
+		function faitTodo(data, success) {
 			console.log('Fait', data)
 		}
 
@@ -129,7 +116,7 @@
 				'data': { 'id' : post_id, 'fait': fait},
 				'success': faitTodo
 			});
-		}*/
+		}
 
 		// supprime une tâche
 		function deleteSuccess(data, success) {
